@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 160 24% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 160 24% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 24% 8%;
+    --primary: 157 95% 34%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 157 40% 94%;
+    --secondary-foreground: 160 40% 16%;
+    --muted: 160 16% 95%;
+    --muted-foreground: 160 8% 42%;
+    --accent: 157 45% 93%;
+    --accent-foreground: 157 60% 16%;
+    --destructive: 0 72% 46%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 152 60% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 44%;
+    --warning-foreground: 0 0% 100%;
+    --info: 199 89% 42%;
+    --info-foreground: 0 0% 100%;
+    --border: 160 14% 89%;
+    --input: 160 14% 85%;
+    --ring: 157 95% 34%;
+    --radius: 0.75rem;
+    --chart-1: 157 95% 34%;
+    --chart-2: 190 80% 40%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 262 70% 55%;
+    --chart-5: 340 75% 55%;
+  }
+
+  .dark {
+    --background: 160 28% 7%;
+    --foreground: 157 20% 95%;
+    --card: 160 24% 10%;
+    --card-foreground: 157 20% 95%;
+    --popover: 160 24% 10%;
+    --popover-foreground: 157 20% 95%;
+    --primary: 157 80% 42%;
+    --primary-foreground: 160 40% 6%;
+    --secondary: 160 16% 16%;
+    --secondary-foreground: 157 20% 92%;
+    --muted: 160 16% 15%;
+    --muted-foreground: 157 10% 62%;
+    --accent: 160 18% 18%;
+    --accent-foreground: 157 30% 90%;
+    --destructive: 0 70% 52%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 152 60% 42%;
+    --success-foreground: 160 40% 8%;
+    --warning: 38 92% 52%;
+    --warning-foreground: 40 40% 8%;
+    --info: 199 89% 52%;
+    --info-foreground: 200 40% 8%;
+    --border: 160 14% 20%;
+    --input: 160 14% 24%;
+    --ring: 157 80% 46%;
+    --chart-1: 157 80% 46%;
+    --chart-2: 190 75% 50%;
+    --chart-3: 38 92% 55%;
+    --chart-4: 262 70% 62%;
+    --chart-5: 340 75% 60%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Persian digits everywhere numbers are typed as Latin */
+  .fa-nums {
+    font-feature-settings: 'ss01';
+  }
+}
+
+@layer utilities {
+  /* Safe-area aware bottom padding for mobile tab bars */
+  .pb-safe {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 0.5rem);
+  }
+
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
+  .tabular-nums-fa {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Thin branded scrollbar */
+  .scroll-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted-foreground) / 0.35) transparent;
+  }
+  .scroll-thin::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .scroll-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 999px;
+  }
+}
+
+/* Selection */
+::selection {
+  background: hsl(157 95% 34% / 0.25);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- print: emergency card ---------- */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    padding: 12mm;
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
