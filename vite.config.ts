@@ -5,6 +5,8 @@ import { resolve } from 'node:path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // GitHub Pages serves the site from /<repo-name>/ — absolute paths break there
+  base: '/Healthamed/',
   plugins: [
     react(),
     VitePWA({
