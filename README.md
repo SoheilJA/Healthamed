@@ -8,6 +8,12 @@
 
 **[https://soheilja.github.io/Healthamed/](https://soheilja.github.io/Healthamed/)**
 
+### انتشار در GitHub Pages
+
+انتشار به‌صورت خودکار با GitHub Actions انجام می‌شود. در تنظیمات مخزن، از مسیر
+**Settings → Pages → Build and deployment**، گزینهٔ **GitHub Actions** را به‌عنوان
+Source انتخاب کنید. پس از آن، هر push به شاخهٔ `main` نسخهٔ buildشده را منتشر می‌کند.
+
 ## 🔑 حساب‌های دمو (کد تایید همیشه `12345` است)
 
 | نقش | موبایل | رمز عبور |
