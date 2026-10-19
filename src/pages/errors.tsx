@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { CloudOff, Home, RotateCcw, ShieldX, SearchX } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
-import { Logo } from '@/components/layout/logo'
+import { Logo } from '@/components/layout/Logo'
 import { toPersianDigits } from '@/lib/persian'
 
 function ErrorShell({

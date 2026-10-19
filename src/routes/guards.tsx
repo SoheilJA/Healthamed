@@ -6,7 +6,7 @@ import { getMyDoctor } from '@/services/doctorService'
 import { useAuthStore } from '@/stores'
 import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { Logo } from '@/components/layout/logo'
+import { Logo } from '@/components/layout/Logo'
 import { Link } from 'react-router-dom'
 
 function CenteredMessage({ title, body, cta }: { title: string; body: string; cta?: { to: string; label: string } }) {

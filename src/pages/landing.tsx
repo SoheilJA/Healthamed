@@ -15,7 +15,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
-import { Logo } from '@/components/layout/logo'
+import { Logo } from '@/components/layout/Logo'
 import { ThemeToggle } from '@/components/layout/header-widgets'
 import { useAuthStore } from '@/stores'
 import { toPersianDigits } from '@/lib/persian'

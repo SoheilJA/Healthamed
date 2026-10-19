@@ -10,7 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Input } from '@/components/ui/input'
 import { Separator } from '@/components/ui/separator'
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
-import { Logo } from '@/components/layout/logo'
+import { Logo } from '@/components/layout/Logo'
 import { loginSchema, type OtpInput } from '@/lib/validators'
 import { auth } from '@/services'
 import { getCurrentUser, DEMO_ACCOUNTS } from '@/services/authService'

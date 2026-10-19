@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
-import { Logo } from '@/components/layout/logo'
+import { Logo } from '@/components/layout/Logo'
 import { registerPatientSchema } from '@/lib/validators'
 import { auth } from '@/services'
 

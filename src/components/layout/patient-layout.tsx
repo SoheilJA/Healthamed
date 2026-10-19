@@ -11,7 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
-import { Logo } from './logo'
+import { Logo } from './Logo'
 import { NotificationBell, SyncIndicator, ThemeToggle } from './header-widgets'
 import { auth } from '@/services'
 import { getCurrentUser } from '@/services/authService'
