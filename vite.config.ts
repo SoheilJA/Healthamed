@@ -3,10 +3,12 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 import { resolve } from 'node:path'
 
+const base = '/Healthamed/'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   // GitHub Pages serves the site from /<repo-name>/ — absolute paths break there
-  base: '/Healthamed/',
+  base,
   plugins: [
     react(),
     VitePWA({
@@ -20,19 +22,19 @@ export default defineConfig({
         lang: 'fa',
         display: 'standalone',
         orientation: 'portrait',
-        scope: '/',
-        start_url: '/',
+        scope: base,
+        start_url: base,
         background_color: '#04AB6C',
         theme_color: '#04AB6C',
         icons: [
-          { src: '/pwa-192x192.png', sizes: '192x192', type: 'image/png' },
-          { src: '/pwa-512x512.png', sizes: '512x512', type: 'image/png' },
-          { src: '/maskable-icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }
+          { src: `${base}pwa-192x192.png`, sizes: '192x192', type: 'image/png' },
+          { src: `${base}pwa-512x512.png`, sizes: '512x512', type: 'image/png' },
+          { src: `${base}maskable-icon-512.png`, sizes: '512x512', type: 'image/png', purpose: 'maskable' }
         ]
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
-        navigateFallback: '/index.html'
+        navigateFallback: `${base}index.html`
       }
     })
   ],

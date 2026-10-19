@@ -179,4 +179,4 @@ export const router = createBrowserRouter([
 
   { path: '/403', element: lazyEl(<ForbiddenPage />) },
   { path: '*', element: lazyEl(<NotFoundPage />) }
-])
+], { basename: import.meta.env.BASE_URL })
